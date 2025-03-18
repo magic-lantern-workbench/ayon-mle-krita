@@ -1,3 +1,6 @@
+"""Add-on package configuration file."""
+from __future__ import annotations
+
 # Required: lower case addon name e.g. 'deadline', otherwise addon
 #   will be invalid
 name = ""
@@ -19,7 +22,7 @@ client_dir = None
 
 # Mapping of addon name to version requirements
 # - addon with specified version range must exist to be able to use this addon
-ayon_required_addons = {}
+ayon_required_addons: dict[str, str] = {}
 # Mapping of addon name to version requirements
 # - if addon is used in same bundle the version range must be valid
-ayon_compatible_addons = {}
+ayon_compatible_addons: dict[str, str] = {}
