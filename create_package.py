@@ -168,7 +168,7 @@ def find_files_in_subdir(
             to match directories to ignore.
 
     Returns:
-        list[tuple[str, str]]: List of tuples with path to file and parent
+        list[FileMapping]: List of tuples with path to file and parent
             directories relative to 'src_path'.
     """
     if ignore_file_patterns is None:
@@ -176,14 +176,14 @@ def find_files_in_subdir(
 
     if ignore_dir_patterns is None:
         ignore_dir_patterns = IGNORE_DIR_PATTERNS
-    output: list[Tuple[str, str]] = []
+    output: list[FileMapping] = []
     if not os.path.exists(src_path):
         return output
 
     hierarchy_queue: collections.deque = collections.deque()
     hierarchy_queue.append((src_path, []))
     while hierarchy_queue:
-        item: Tuple[str, str] = hierarchy_queue.popleft()
+        item: FileMapping = hierarchy_queue.popleft()
         dirpath, parents = item
         for name in os.listdir(dirpath):
             path: str = os.path.join(dirpath, name)
