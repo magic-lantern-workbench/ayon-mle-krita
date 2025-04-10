@@ -1,4 +1,3 @@
-"""Add-on package configuration file."""
 from __future__ import annotations
 
 # Required: lower case addon name e.g. 'deadline', otherwise addon
