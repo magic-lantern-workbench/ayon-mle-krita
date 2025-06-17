@@ -153,7 +153,7 @@ def find_files_in_subdir(
     src_path: str,
     ignore_file_patterns: Optional[list[Pattern]] = None,
     ignore_dir_patterns: Optional[list[Pattern]] = None
-) -> list[Tuple[str, str]]:
+) -> list[FileMapping]:
     """Find all files to copy in subdirectories of given path.
 
     All files that match any of the patterns in 'ignore_file_patterns' will
