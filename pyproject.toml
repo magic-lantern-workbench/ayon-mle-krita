@@ -6,10 +6,10 @@
 
 
 [project]
-name = "ayon-addon-template"
+name = "ayon-mle-krita"
 version = "0.1.0"
-description = "Add your description here"
-license = "Apache-2.0"
+description = "Magic Lantern Workbench AYON Addon for Krita"
+license = "MIT"
 readme = "README.md"
 requires-python = ">=3.9.6"
 dependencies = []
